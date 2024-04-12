@@ -1,0 +1,17 @@
+// ::::::: General Style :::::::
+@use "general/mixin";
+@use "general/variables";
+@use "general/normalize";
+@use "general/modifier";
+
+// ::::::: Common :::::::
+@use "component/layout"; // 레이아웃
+@use "component/boxlist"; // 박스 스타일, 리스트
+@use "component/button"; // 버튼, 버튼박스
+@use "component/title"; // heading, title 등 제목 요소
+@use "component/etc"; // 라벨, 아이콘 등 공통요소
+
+// ::::::: Page :::::::
+
+// ::::::: Dialog :::::::
+@use "component/dialog"; // 다이얼로그, 팝업, 얼럿

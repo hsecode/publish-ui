@@ -1,0 +1,92 @@
+@use "./mixin" as *;
+@use "./variables" as *;
+
+// ::::: flex :::::
+// ::::: flex item 정렬 :::::
+// space-between
+[class*="--division"] {
+    @include flex(flex, space-b);
+}
+
+// space-between & center
+[class*="--flexBtw"] {
+    @include flex(flex, space-b, center);
+}
+
+// space-around & center
+[class*="--flexArnd"] {
+    @include flex(flex, space-a, center);
+}
+
+// space-evenly & center
+[class*="--flexEven"] {
+    @include flex(flex, space-e, center);
+}
+
+// center & center
+[class*="--flexMid"] {
+    @include flex(flex, center, center);
+}
+
+// just align-items: center
+[class*="--flexCnt"] {
+    @include flex(flex, normal, center);
+}
+
+// just display: flex
+[class*="--flex"] {
+    display: flex;
+}
+
+// flex-shrink: 0
+[class*="--keepSize"] {
+    flex-shrink: 0;
+}
+[class*="--columnBox"] {
+    flex-direction: column;
+    @include flex(flex, space-b);
+}
+
+// ::::: text-align :::::
+[class*="--alignLeft"] {
+    text-align: left;
+}
+
+[class*="--alignRight"] {
+    text-align: right;
+}
+
+[class*="--alignCenter"] {
+    text-align: center;
+}
+
+// ::::: float :::::
+[class*="--floatLeft"] {
+    float: left;
+}
+[class*="--floatRight"] {
+    float: right;
+}
+
+// ::::: ellipsis :::::
+[class*="--ellipsis"] {
+    @include ellipsis;
+}
+
+// ::::: font-weight :::::
+[class*="--strong"] {
+    font-weight: 700;
+}
+
+// ::::: space (margin/padding) :::::
+[class*="--topSpace"] {
+    margin-top: 64px;
+}
+[class*="--topFix"] {
+    margin-top: -33px;
+}
+[class*="--topLine"] {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid #eee;
+}

@@ -1,0 +1,227 @@
+@use "sass:math";
+@use "sass:map";
+@use "sass:string";
+
+@use "./variables" as *;
+
+// :::::: Flex :::::::
+$flexMap: (
+    flex: flex,
+    inline-flex: inline-flex,
+    flex-s: flex-start,
+    flex-e: flex-end,
+    space-b: space-between,
+    space-a: space-around,
+    space-e: space-evenly,
+    stretch: stretch,
+    left: left,
+    right: right,
+    center: center,
+    end: end,
+    normal: normal,
+    inherit: inherit,
+    initial: initial,
+    revert: revert,
+    start: start,
+    unset: unset,
+);
+@function _get-flex-value($key) {
+    @return map-get($flexMap, $key);
+}
+
+@mixin flex($flex: flex, $jc: null, $ai: null) {
+    display: _get-flex-value($flex);
+
+    @if $jc != null {
+        justify-content: _get-flex-value($jc);
+    }
+
+    @if $ai != null {
+        align-items: _get-flex-value($ai);
+    }
+}
+
+// ::::::: Sprite :::::::
+@mixin splogin($spWidth: 0, $spHeight: 0, $posX: 0, $posY: 0, $url: $spUrl) {
+    display: inline-block;
+    vertical-align: top;
+    width: $spWidth;
+    height: $spHeight;
+    background: url($url) $posX $posY no-repeat;
+    background-size: $spSize;
+    line-height: 100em;
+    color: transparent;
+    overflow: hidden;
+}
+
+@mixin spimg($spWidth: 0, $spHeight: 0, $posX: 0, $posY: 0, $url: $spUrl) {
+    width: $spWidth;
+    height: $spHeight;
+    background: url($url) $posX $posY no-repeat;
+    background-size: $spSize;
+}
+
+@mixin absolSp($spWidth: 0, $spHeight: 0, $posX: 0, $posY: 0, $url: $spUrl) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -(math.round(math.div($spHeight, 2)));
+    margin-left: -(math.round(math.div($spWidth, 2)));
+    width: $spWidth;
+    height: $spHeight;
+    background: url($url) $posX $posY no-repeat;
+    background-size: $spSize;
+}
+
+// ::::::: Absolute Center :::::::
+@mixin absolCnt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// ::::::: Blind :::::::
+@mixin blind {
+    position: absolute !important;
+    z-index: -1;
+    width: 1px !important;
+    height: 1px !important;
+    border: 0;
+    clip: rect(1px 1px 1px 1px) !important;
+    clip-path: inset(50%);
+    overflow: hidden !important;
+}
+@mixin blind-inline {
+    display: inline-block;
+    position: relative !important;
+    z-index: -1;
+    width: 1px !important;
+    height: 1px !important;
+    border: 0;
+    clip: rect(1px 1px 1px 1px) !important;
+    clip-path: inset(50%);
+    overflow: hidden !important;
+}
+
+// ::::::: Clearfix :::::::
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+// ::::::: Ellipsis :::::::
+@mixin ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+@mixin ellipsis-multi($numLines, $lineHeight) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $numLines;
+    line-height: $lineHeight;
+    overflow: hidden;
+}
+
+// ::::::: Animation :::::::
+@mixin animation($name, $duration, $delay) {
+    animation-name: $name;
+    animation-duration: $duration;
+    animation-delay: $delay;
+}
+@mixin keyframe($animation_name) {
+    @keyframes #{$animation_name} {
+        @content;
+    }
+}
+
+// ::::::: asperct-ratio supports :::::::
+@mixin aspect($width: 16, $height: 9) {
+    aspect-ratio: $width / $height;
+
+    @supports not (aspect-ratio: $width / $height) {
+        &::before {
+            content: "";
+            float: left;
+            padding-top: calc((#{$height} / #{$width}) * 100%);
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    }
+}
+
+// ::::::: Media query breakpoint :::::::
+@mixin mobile {
+    @media (max-width: #{$mobile}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+// ::::::: Media query option (responsive) :::::::
+@mixin media($min-width, $max-width: false, $display: block) {
+    @if $max-width {
+        @media (min-width: #{$min-width}) and (max-width: #{$max-width - 1}) {
+            display: #{$display};
+        }
+    } @else {
+        @media (min-width: #{$min-width}) {
+            display: #{$display};
+        }
+    }
+}
+
+.mq {
+    // mq__mo
+    &__mo {
+        @include media($tablet, false, none);
+    }
+
+    // mq__tab
+    &__tab {
+        @include media(0, $mobile, none);
+        @include media($tablet, $desktop, block);
+        @include media($desktop, false, none);
+    }
+
+    // mq__pc
+    &__pc {
+        display: none;
+        @include media($desktop, false, block);
+    }
+
+    // mq__moTab
+    &__moTab {
+        @include media($desktop, false, none);
+    }
+
+    // mq__tabPc
+    &__tabPc {
+        display: none;
+        @include media($tablet, false, block);
+    }
+
+    // mq__moPc
+    &__moPc {
+        @include media($tablet, $desktop, none);
+    }
+}
