@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+<title>Publish-UI-Mall</title>
+<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+
+<header role="banner">
+	<h1 class="hd_h1">아모레 성수</h1>
+	<div class="viewCheckBox">
+		<label class="viewCheck viewCheck--all">
+			<input type="checkbox">
+			<span class="viewCheck__text">모두 접기</span>
+		</label>
+	</div>
+</header>
+<section>
+	<div class="sectionBox">
+		<div class="sectionHeadingBox">
+			<button type="button" class="sectionHeading">▼ 공통 UI ▼</button>
+		</div>
+		<div class="sectionList sectionList--active">
+			<section>
+				<h1 class="sec_h">공통</h1>
+				<ul>
+					<li><a href="mall_layout.html" target="_blank">레이아웃 <span>/ mall_layout.html</span></a></li>
+				</ul>
+			</section>
+		</div>
+	</div>
+</section>
+
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script>
+	const viewCheckItem = document.querySelector('.viewCheck--all input[type="checkbox"]');
+	const sectionList = document.querySelectorAll('.sectionList');
+	const sectionBtn = document.querySelectorAll('button.sectionHeading');
+
+	viewCheckItem.addEventListener('change', function() {
+		const isChecked = this.checked;
+		sectionList.forEach(section => {
+			if (isChecked) {
+			section.classList.remove('sectionList--active');
+			} else {
+			section.classList.add('sectionList--active');
+			}
+		});
+	});
+
+	sectionBtn.forEach(function(button, index) {
+		button.addEventListener('click', function(e) {
+			e.preventDefault();
+			this.parentNode.nextElementSibling.classList.toggle('sectionList--active');
+			viewCheckItem.checked = false;
+		});
+	});
+</script>
+</body>
+</html>
