@@ -1,1 +1,27 @@
 @use "../general/index" as *;
+
+.swiper-banner-box {
+    position: relative;
+    padding: 20px;
+
+    .swiper-banner {
+        position: relative;
+        border-radius: 12px;
+    }
+}
+
+.category-btn {
+
+    // category-btn-box
+    &-box {
+        padding: 0 20px;
+        @include flex(flex, normal, center);
+    }
+
+    // category-btn-item
+    &-item {
+        + .category-btn-item {
+            margin-left: 20px;
+        }
+    }
+}

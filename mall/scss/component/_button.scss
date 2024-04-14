@@ -1,1 +1,29 @@
 @use "../general/index" as *;
+
+.category-btn {
+    position: relative;
+    padding-top: 54px;
+    width: 51px;
+    text-align: center;
+    
+    // category-btn__text
+    &__text {
+        font-size: 12px;
+        color: #333;
+    }
+
+    // category-btn--call
+    &--call {
+        background: url(https://apm-web.amoremall.com/public/resource/mall/svg/ic/ic_phone_s51_3a416f.svg) no-repeat;
+    }
+
+    // category-btn--reserve
+    &--reserve {
+        background: url(https://apm-web.amoremall.com/public/resource/mall/svg/ic/ic_calendar_s51_3a416f.svg) no-repeat;
+    }
+
+    // category-btn--share
+    &--share {
+        background: url(https://apm-web.amoremall.com/public/resource/mall/svg/ic/ic_share_s51_3a416f.svg) no-repeat;
+    }
+}
