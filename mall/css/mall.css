@@ -1,12 +1,3 @@
-@font-face{font-family:Pretendard;font-weight:900;font-display:swap;src:url(../fonts/pretendard/Pretendard-Black.woff) format("woff"),url(../fonts/pretendard/Pretendard-Black.ttf) format("ttf")}
-@font-face{font-family:Pretendard;font-weight:800;font-display:swap;src:url(../fonts/pretendard/Pretendard-ExtraBold.woff) format("woff"),url(../fonts/pretendard/Pretendard-ExtraBold.ttf) format("ttf")}
-@font-face{font-family:Pretendard;font-weight:700;font-display:swap;src:url(../fonts/pretendard/Pretendard-Bold.woff) format("woff"),url(../fonts/pretendard/Pretendard-Bold.ttf) format("ttf")}
-@font-face{font-family:Pretendard;font-weight:600;font-display:swap;src:url(../fonts/pretendard/Pretendard-SemiBold.woff) format("woff"),url(../fonts/pretendard/Pretendard-SemiBold.ttf) format("ttf")}
-@font-face{font-family:Pretendard;font-weight:500;font-display:swap;src:url(../fonts/pretendard/Pretendard-Medium.woff) format("woff"),url(../fonts/pretendard/Pretendard-Medium.ttf) format("ttf")}
-@font-face{font-family:Pretendard;font-weight:400;font-display:swap;src:url(../fonts/pretendard/Pretendard-Regular.woff) format("woff"),url(../fonts/pretendard/Pretendard-Regular.ttf) format("ttf")}
-@font-face{font-family:Pretendard;font-weight:300;font-display:swap;src:url(../fonts/pretendard/Pretendard-Light.woff) format("woff"),url(../fonts/pretendard/Pretendard-Light.ttf) format("ttf")}
-@font-face{font-family:Pretendard;font-weight:200;font-display:swap;src:url(../fonts/pretendard/Pretendard-ExtraLight.woff) format("woff"),url(../fonts/pretendard/Pretendard-ExtraLight.ttf) format("ttf")}
-@font-face{font-family:Pretendard;font-weight:100;font-display:swap;src:url(../fonts/pretendard/Pretendard-Thin.woff) format("woff"),url(../fonts/pretendard/Pretendard-Thin.ttf) format("ttf")}
 @media (min-width:768px){
 .mq__mo{display:none}
 }
@@ -106,16 +97,6 @@ button[class]:disabled{cursor:default}
 .o2o-wrap--flex-layout .container{flex:1}
 .o2o-wrap .module-header{background-color:#333545}
 .o2o-wrap .module-footer__links{margin-bottom:25px}
-.loginWrap .ocdHeader{position:relative;height:58px;padding:0 45px;border-bottom:1px solid #eee;display:flex;justify-content:center;align-items:center}
-.loginWrap .ocdHeader__heading{font-size:20px;font-weight:700;line-height:28px;color:#000}
-.loginWrap .contentArea{margin:0 auto;padding:32px 16px 50px}
-@media (min-width:768px){
-.loginWrap .contentArea{max-width:500px;padding-left:0;padding-right:0}
-}
-@media (min-width:1024px){
-.loginWrap .ocdHeader{align-items:normal;height:94px;padding:51px 0 0}
-.loginWrap .ocdHeader .btnHeader{display:none}
-}
 .swiper-banner-box{position:relative;padding:20px}
 .swiper-banner-box .swiper-banner{position:relative;border-radius:12px}
 .category-btn-box{padding:0 20px;display:flex;justify-content:normal;align-items:center}
