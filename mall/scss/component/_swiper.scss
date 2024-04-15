@@ -1,0 +1,233 @@
+@use "general/index" as *;
+
+.swiper-container {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0;
+    z-index: 1;
+}
+
+.swiper-container:hover .swiper-button-next,.swiper-container:hover .swiper-button-prev {
+    display: block;
+}
+
+.swiper-container:hover .swiper-button-disabled {
+    display: none;
+}
+
+.swiper-container:hover .sliderNav .swiper-button-disabled {
+    display: flex;
+}
+
+@media screen and (max-device-width: 1023px) {
+    .swiper-container .swiper-button-next,.swiper-container .swiper-button-prev {
+        display:none !important;
+    }
+}
+
+.swiper-container-vertical>.swiper-wrapper {
+    flex-direction: column;
+}
+
+.swiper-container.styleA .sliderNav {
+    padding: 0 20px;
+}
+
+.swiper-container.styleA .sliderNav .sliderPrev {
+    width: 42px;
+    height: 42px;
+    background: url(//apm-web.amoremall.com/public/apcp-css/3.0.55/public/resource/mall/svg/ic/ic_angle_left_circle_fill_s42.svg);
+}
+
+.swiper-container.styleA .sliderNav .sliderPrev:after {
+    content: none;
+}
+
+.swiper-container.styleA .sliderNav .sliderPrev.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.swiper-container.styleA .sliderNav .sliderNext {
+    width: 42px;
+    height: 42px;
+    background: url(//apm-web.amoremall.com/public/apcp-css/3.0.55/public/resource/mall/svg/ic/ic_angle_right_circle_fill_s42.svg);
+}
+
+.swiper-container.styleA .sliderNav .sliderNext:after {
+    content: none;
+}
+
+.swiper-container.styleA .sliderNav .sliderNext.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.swiper-container-fade .swiper-slide {
+    pointer-events: none;
+    transition-property: opacity;
+}
+
+.swiper-container-fade .swiper-slide-active {
+    pointer-events: auto;
+}
+
+.swiper-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 1;
+    box-sizing: content-box;
+}
+
+.swiper-slide,.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform,-webkit-transform,-moz-transform,-o-transform;
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+}
+
+.swiper-backface-hidden .swiper-slide {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+.swiper-pointer-events {
+    touch-action: pan-y;
+}
+
+.swiper-grid-column>.swiper-wrapper {
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.swiper-grid-column .swiper-slide {
+    height: auto;
+}
+
+.swiper-pagination-progressbar {
+    position: relative;
+    width: calc(100% - 40px);
+    height: 1px;
+    z-index: 1;
+    margin: 0 20px;
+    background: #e2e2e2;
+}
+
+.swiper-pagination-progressbar-fill {
+    display: block;
+    background: #222;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transform-origin: left top;
+}
+
+.swiper-pagination-progressbar.colorSecondary {
+    position: absolute;
+    bottom: 25px;
+    background: #fff;
+}
+
+.swiper-pagination-progressbar.colorSecondary .swiper-pagination-progressbar-fill {
+    background-color: #222;
+}
+
+.slideArea .swiper-pagination-progressbar {
+    margin-top: 10px;
+    height: 2px;
+    background-color: #e9ecef;
+}
+
+.apSwiper--slideArea .swiper-pagination-progressbar {
+    position: absolute;
+    bottom: 16px;
+    height: 2px;
+    background-color: #e9ecef;
+}
+
+.swiper-button-prev {
+    width: 35px;
+    height: 35px;
+    background: url(//apm-web.amoremall.com/public/apcp-css/3.0.55/public/resource/mall/svg/ic/ic_angle_flicking_left_s35.svg) no-repeat 50%;
+    background-size: contain;
+}
+
+.swiper-button-next {
+    width: 35px;
+    height: 35px;
+    background: url(//apm-web.amoremall.com/public/apcp-css/3.0.55/public/resource/mall/svg/ic/ic_angle_flicking_right_s35.svg) no-repeat 50%;
+    background-size: contain;
+}
+
+.swiper-button-next,.swiper-button-prev {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.regQna .swiper-button-next,.regQna .swiper-button-prev {
+    margin-top: 25px;
+}
+
+[class*=shopSwiper] .swiper-button-next,[class*=shopSwiper] .swiper-button-prev {
+    width: 36px;
+    height: 36px;
+    padding: 2px;
+    background-color: rgba(0,0,0,.2);
+    transform: translateY(-18px);
+}
+
+@media screen and (max-device-width: 1023px) {
+    [class*=shopSwiper] .swiper-button-next,[class*=shopSwiper] .swiper-button-prev {
+        display:none !important;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .mobile--preview [class*=shopSwiper] .swiper-button-next,.mobile--preview [class*=shopSwiper] .swiper-button-prev {
+        display:none !important;
+    }
+}
+
+.swiper-button-next {
+    right: 0;
+}
+
+.swiper-button-prev {
+    left: 0;
+}
+
+.swiper-button-disabled .atom-icon {
+    opacity: .4;
+}
+
+.sliderNav {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sliderNav .swiper-button-disabled {
+    opacity: .3;
+}
+
+.apSwiper--bannerDiscountSwiper {
+    position: relative;
+    width: 100%;
+    border-radius: 12px;
+}
