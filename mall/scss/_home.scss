@@ -1,0 +1,125 @@
+@use "general/index" as *;
+
+.product-detail {
+    .article {
+        &.o2o-contents {
+            &:last-of-type {
+                border-bottom: 0;
+            }
+        }
+
+        // article-btn-box
+        &-btn-box {
+            gap: 6px;
+            margin-top: 24px;
+            @include flex(flex, center);
+            @at-root .product-detail .article__reserve {
+                .article-btn-box {
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+}
+
+.apSwiper--news-list {
+    padding: 26px 0;
+    background-color: #f0f0f0;
+
+    .swiper-wrapper {
+        align-items: center;
+    }
+    .swiper-slide {
+        width: 100%;
+        max-width: 305px;
+        margin-left: 16px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 18px;
+
+        &.more {
+            margin: 0;
+            width: 122px;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            @include flex(flex, center, center);
+            .btn-morelist {
+
+                // btn-morelist__icon
+                &__icon {
+                    position: relative;
+                    width: 42px;
+                    height: 42px;
+                    margin-bottom: 8px;
+                    border: 1px solid #e2e2e2;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    @include flex(flex, center, center);
+                    &::before {
+                        content: '';
+                        width: 20px;
+                        height: 20px;
+                        background: url(//apm-web.amoremall.com/public/apcp-css/3.0.55/public/resource/mall/svg/ic/ic_arrow_right_s20_666.svg) no-repeat center / 20px 20px;
+                    }
+                }
+
+                // btn-morelist__text
+                &__text {
+                    display: block;
+                    margin-top: 8px;
+                    text-align: center;
+                    font-size: 13px;
+                    color: #000;
+                }
+            }
+        }
+    }
+
+    .list_tem {
+        //  list-item__link
+        &__link {
+            color: #666;
+        }
+    }
+
+    .tit {
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: -.08px;
+        color: #000;
+        @include ellipsis;
+    }
+
+    .desc {
+        min-height: 36px;
+        max-height: 36px;
+        margin-bottom: 8px;
+        font-size: 14px;
+        letter-spacing: -.07px;
+        color: #333;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        line-height: 18px;
+    }
+
+    .date {
+        font-size: 12px;
+        letter-spacing: -.06px;
+        color: #999;
+    }
+}
+
+.store-desc {
+    max-height: 120px;
+    font-size: 15px;
+    color: #333;
+    letter-spacing: -.08px;
+    @include ellipsis-multi(5, 24px);
+    > a {
+        display: block;
+        color: inherit;
+    }
+}
