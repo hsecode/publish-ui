@@ -25,3 +25,42 @@
         }
     }
 }
+
+.store-info-list {
+    // store-info-list__item
+    &__item {
+        + .store-info-list__item {
+            margin-top: 16px;
+        }
+
+        .item {
+            // item-thumb
+            &-thumb {
+                width: 20px;
+                height: 20px;
+                margin-right: 16px;
+            }
+
+            // item-contents
+            &-contents {
+                display: flex;
+                flex-wrap: wrap;
+                
+                .txt {
+                    width: 100%;
+                    font-size: 15px;
+                    line-height: 21px;
+
+                    + .txt {
+                        margin-top: 2px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.service-info-list {
+    // service-info-list__item
+    &__item {}
+}

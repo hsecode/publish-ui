@@ -74,15 +74,6 @@ button[class]:disabled{cursor:default}
 .module-header__heading{font-size:22px;font-weight:700;line-height:27px}
 .module-header__desc{margin-top:7px;font-size:14px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
 .module-header__desc--default{color:#d3d3d3}
-.module-linkPopup{display:none;width:200px;padding:12px 0;border-radius:8px;background-color:#fff;box-shadow:0 3px 6px 0 rgba(0,0,0,.16)}
-.module-header__logo-link .module-linkPopup{position:absolute;top:40px;right:0;z-index:2}
-.module-linkPopup__item{height:48px}
-.module-linkPopup__item+.module-linkPopup__item{margin-top:4px}
-.module-linkPopup__item-btn{width:100%;height:100%;padding:0 20px;text-align:left;display:flex;justify-content:normal;align-items:center}
-.module-linkPopup__item-btn .linkThumb{position:relative;width:32px;height:32px;margin-right:12px;background-color:#ddd;border-radius:10px}
-.module-linkPopup__item-btn .linkText{font-size:16px;color:#333}
-.module-linkPopup__item--active .linkThumb::before{content:"";display:block;position:absolute;bottom:-3px;right:-3px;z-index:1;width:10px;height:10px;border:1px solid #fff;background-color:#ff5a5a;border-radius:5px}
-.module-linkPopup__item--active .linkText{font-weight:700;color:#000}
 .module-footer{background:#f5f5f5}
 .module-footer__inner{padding:40px 20px 94px}
 .module-footer__links{display:flex;justify-content:center;align-items:center}
@@ -97,19 +88,43 @@ button[class]:disabled{cursor:default}
 .o2o-wrap--flex-layout .container{flex:1}
 .o2o-wrap .module-header{background-color:#333545}
 .o2o-wrap .module-footer__links{margin-bottom:25px}
+.o2o-contents{padding:40px 20px;border-bottom:10px solid #f0f0f0}
+.o2o-contents:last-of-type{padding:40px 20px 60px}
+.contents-top+.contents-tab{margin-top:28px}
 .swiper-banner-box{position:relative;padding:20px}
 .swiper-banner-box .swiper-banner{position:relative;border-radius:12px}
 .category-btn-box{padding:0 20px;display:flex;justify-content:normal;align-items:center}
 .category-btn-item+.category-btn-item{margin-left:20px}
+.store-info-list__item+.store-info-list__item{margin-top:16px}
+.store-info-list__item .item-thumb{width:20px;height:20px;margin-right:16px}
+.store-info-list__item .item-contents{display:flex;flex-wrap:wrap}
+.store-info-list__item .item-contents .txt{width:100%;font-size:15px;line-height:21px}
+.store-info-list__item .item-contents .txt+.txt{margin-top:2px}
+.tabs{position:relative;display:flex;border-bottom:1px solid #f0f0f0;background-color:#fff;z-index:2}
+.o2o-wrap .tabs{position:sticky;top:56px;height:50px;padding:0 20px}
+.o2o-wrap .tabs__item{position:relative;min-width:51px;height:50px;font-size:18px;color:#333}
+.o2o-wrap .tabs__item--active{font-weight:700}
+.o2o-wrap .tabs__item--active::after{content:"";position:absolute;bottom:0;left:0;right:0;height:2px;background-color:#333545}
+.o2o-wrap .tabs__item+.tabs__item{margin-left:20px}
 .category-btn{position:relative;padding-top:54px;width:51px;text-align:center}
 .category-btn__text{font-size:12px;color:#333}
 .category-btn--call{background:url(https://apm-web.amoremall.com/public/resource/mall/svg/ic/ic_phone_s51_3a416f.svg) no-repeat}
 .category-btn--reserve{background:url(https://apm-web.amoremall.com/public/resource/mall/svg/ic/ic_calendar_s51_3a416f.svg) no-repeat}
 .category-btn--share{background:url(https://apm-web.amoremall.com/public/resource/mall/svg/ic/ic_share_s51_3a416f.svg) no-repeat}
-.basicTitle{font-size:14px;font-weight:700;color:#000}
-.basicTitleBox{margin-bottom:8px}
-.basicTitle--h2{font-size:20px;line-height:28px}
+.btn-expand{padding:8px;border:1px solid #e2e2e2;background-color:#fff;border-radius:6px}
+.btn-round{min-width:50px;height:46px;padding:0 20px;border:1px solid #e2e2e2;border-radius:23px;font-size:14px;color:#000;display:flex;justify-content:center;align-items:center}
+.btn-round .text{overflow:hidden;white-space:nowrap;display:flex;justify-content:normal}
+.btn-round .text em{margin-right:4px;font-weight:700;font-style:normal;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.btn-round .ic_more_8x20{flex-shrink:0;margin-left:6px}
+.heading-box{display:block}
+.o2o-contents .heading-box{margin-bottom:20px}
+.heading-box .heading{font-size:18px;font-weight:700;color:#000}
+.heading-box .heading--h4{font-size:22px}
 .blind{position:absolute!important;z-index:-1;width:1px!important;height:1px!important;border:0;clip:rect(1px 1px 1px 1px)!important;-webkit-clip-path:inset(50%);clip-path:inset(50%);overflow:hidden!important}
+.module-map{position:relative;height:140px;border:1px solid hsla(0,0%,80%,.5);border-radius:8px;overflow:hidden}
+.o2o-contents .module-map{margin-top:20px}
+.module-map .btn-expand{position:absolute;top:8px;right:8px;z-index:10}
+.module-map__detail{width:100%;height:100%;overflow:hidden}
 .atom-icon{display:inline-block;vertical-align:top;font-size:1px;white-space:nowrap;color:transparent;overflow:hidden}
 .atom-icon.logo_amoreStore_s165x28_fff{width:165px;height:28px;background:url(//apm-web.amoremall.com/public/apcp-css/3.0.55/public/resource/mall/svg/logo/logo_amoreStore_s165x28_fff.svg) no-repeat 50%;background-size:contain}
 .atom-icon.ic_angle_down_circle_fill_s24{width:24px;height:24px;background:url(//apm-web.amoremall.com/public/apcp-css/3.0.55/public/resource/core/svg/ic/ic_angle_down_circle_fill_s24.svg) no-repeat 50%;background-size:contain}
@@ -118,10 +133,88 @@ button[class]:disabled{cursor:default}
 .icon--user::before{content:"";display:block;height:100%;background-image:url(//apm-web.amoremall.com/public/apcp-css/3.0.55/public/resource/mall/svg/ic/ic_user_s32_fff.svg);background-size:contain;background-repeat:no-repeat}
 .icon.ic_gnb_logo_amore_96{width:32px;height:32px;background-image:url(//apm-web.amoremall.com/public/apcp-css/3.0.55/public/resource/mall/png/logo/logo_amoreMall_s96.png);background-size:32px 32px;border-radius:10px}
 .icon.ic_gnb_logo_amore_store_64{width:32px;height:32px;background-image:url(//apm-web.amoremall.com/public/apcp-css/3.0.55/public/resource/mall/png/logo/logo_amoreStore_s64.jpg);background-size:32px 32px;border-radius:10px}
+.icon.ic_store_20{width:20px;height:20px;background-size:20px;background-image:url(//apm-web.amoremall.com/public/apcp-css/3.0.55/public/resource/mall/svg/ic/ic_pin_s20x21_000.svg)}
+.icon.icon_mobile_20{width:20px;height:20px;background-size:20px;background-image:url(//apm-web.amoremall.com/public/apcp-css/3.0.55/public/resource/mall/svg/ic/ic_phone_s20_000.svg)}
+.icon.ic_time_20{width:20px;height:20px;background-size:20px;background-image:url(//apm-web.amoremall.com/public/apcp-css/3.0.55/public/resource/mall/svg/ic/ic_clock_circle_fill_s20_style01.svg)}
+.icon.ic_sns_20{width:20px;height:20px;background-size:20px;background-image:url(//apm-web.amoremall.com/public/apcp-css/3.0.55/public/resource/mall/svg/ic/ic_home_fill_s20.svg)}
+.icon.ic_scale_20{width:20px;height:20px;background-size:20px;background-image:url(//apm-web.amoremall.com/public/apcp-css/3.0.55/public/resource/mall/svg/ic/ic_scale_fill_s20.svg)}
+.icon.ic_more_8x20{width:8px;height:20px;background-size:8px 20px;background-image:url(//apm-web.amoremall.com/public/apcp-css/3.0.55/public/resource/mall/svg/ic/ic_angle_right_s8x20_666.svg)}
 .txt--black{color:#000}
+.txt--blue{color:#457cdb}
 .txt--red{color:#ef2a23}
-.txt--gray{color:#666}
+.txt--gray{color:#888}
 .txt--white{color:#fff}
+.swiper-container{position:relative;overflow:hidden;margin:0 auto;padding:0;z-index:1}
+.swiper-container:hover .swiper-button-next,.swiper-container:hover .swiper-button-prev{display:block}
+.swiper-container:hover .swiper-button-disabled{display:none}
+.swiper-container:hover .sliderNav .swiper-button-disabled{display:flex}
+@media screen and (max-device-width:1023px){
+.swiper-container .swiper-button-next,.swiper-container .swiper-button-prev{display:none!important}
+}
+.swiper-container-vertical>.swiper-wrapper{flex-direction:column}
+.swiper-container.styleA .sliderNav{padding:0 20px}
+.swiper-container.styleA .sliderNav .sliderPrev{width:42px;height:42px;background:url(//apm-web.amoremall.com/public/apcp-css/3.0.55/public/resource/mall/svg/ic/ic_angle_left_circle_fill_s42.svg)}
+.swiper-container.styleA .sliderNav .sliderPrev:after{content:none}
+.swiper-container.styleA .sliderNav .sliderPrev.is-hidden{opacity:0;pointer-events:none}
+.swiper-container.styleA .sliderNav .sliderNext{width:42px;height:42px;background:url(//apm-web.amoremall.com/public/apcp-css/3.0.55/public/resource/mall/svg/ic/ic_angle_right_circle_fill_s42.svg)}
+.swiper-container.styleA .sliderNav .sliderNext:after{content:none}
+.swiper-container.styleA .sliderNav .sliderNext.is-hidden{opacity:0;pointer-events:none}
+.swiper-container-fade .swiper-slide{pointer-events:none;transition-property:opacity}
+.swiper-container-fade .swiper-slide-active{pointer-events:auto}
+.swiper-wrapper{display:flex;z-index:1;box-sizing:content-box}
+.swiper-slide,.swiper-wrapper{position:relative;width:100%;height:100%;transition-property:transform}
+.swiper-slide{flex-shrink:0}
+.swiper-backface-hidden .swiper-slide{transform:translateZ(0);backface-visibility:hidden}
+.swiper-pointer-events{touch-action:pan-y}
+.swiper-grid-column>.swiper-wrapper{flex-wrap:wrap;flex-direction:column}
+.swiper-grid-column .swiper-slide{height:auto}
+.swiper-pagination-progressbar{position:relative;width:calc(100% - 40px);height:1px;z-index:1;margin:0 20px;background:#e2e2e2}
+.swiper-pagination-progressbar-fill{display:block;background:#222;width:100%;height:100%;left:0;top:0;transform-origin:left top}
+.swiper-pagination-progressbar.colorSecondary{position:absolute;bottom:25px;background:#fff}
+.swiper-pagination-progressbar.colorSecondary .swiper-pagination-progressbar-fill{background-color:#222}
+.slideArea .swiper-pagination-progressbar{margin-top:10px;height:2px;background-color:#e9ecef}
+.apSwiper--slideArea .swiper-pagination-progressbar{position:absolute;bottom:16px;height:2px;background-color:#e9ecef}
+.swiper-button-prev{width:35px;height:35px;background:url(//apm-web.amoremall.com/public/apcp-css/3.0.55/public/resource/mall/svg/ic/ic_angle_flicking_left_s35.svg) no-repeat 50%;background-size:contain}
+.swiper-button-next{width:35px;height:35px;background:url(//apm-web.amoremall.com/public/apcp-css/3.0.55/public/resource/mall/svg/ic/ic_angle_flicking_right_s35.svg) no-repeat 50%;background-size:contain}
+.swiper-button-next,.swiper-button-prev{display:none;position:absolute;top:50%;transform:translateY(-50%);z-index:1}
+.regQna .swiper-button-next,.regQna .swiper-button-prev{margin-top:25px}
+[class*=shopSwiper] .swiper-button-next,[class*=shopSwiper] .swiper-button-prev{width:36px;height:36px;padding:2px;background-color:rgba(0,0,0,.2);transform:translateY(-18px)}
+@media screen and (max-device-width:1023px){
+[class*=shopSwiper] .swiper-button-next,[class*=shopSwiper] .swiper-button-prev{display:none!important}
+}
+@media screen and (max-width:1023px){
+.mobile--preview [class*=shopSwiper] .swiper-button-next,.mobile--preview [class*=shopSwiper] .swiper-button-prev{display:none!important}
+}
+.swiper-button-next{right:0}
+.swiper-button-prev{left:0}
+.swiper-button-disabled .atom-icon{opacity:.4}
+.sliderNav{position:absolute;width:100%;z-index:1;display:flex;justify-content:space-between}
+.sliderNav .swiper-button-disabled{opacity:.3}
+.apSwiper--bannerDiscountSwiper{position:relative;width:100%;border-radius:12px}
+.product-detail .article.o2o-contents:last-of-type{border-bottom:0}
+.product-detail .article-btn-box{gap:6px;margin-top:24px;display:flex;justify-content:center}
+.apSwiper--news-list{padding:26px 0;background-color:#f0f0f0}
+.apSwiper--news-list .swiper-wrapper{align-items:center}
+.apSwiper--news-list .swiper-slide{width:100%;max-width:305px;margin-left:16px;padding:20px;background-color:#fff;border-radius:18px}
+.apSwiper--news-list .swiper-slide.more{margin:0;width:122px;align-items:center;justify-content:center;background-color:transparent;display:flex;justify-content:center;align-items:center}
+.apSwiper--news-list .swiper-slide.more .btn-morelist__icon{position:relative;width:42px;height:42px;margin-bottom:8px;border:1px solid #e2e2e2;border-radius:50%;overflow:hidden;display:flex;justify-content:center;align-items:center}
+.apSwiper--news-list .swiper-slide.more .btn-morelist__icon::before{content:"";width:20px;height:20px;background:url(//apm-web.amoremall.com/public/apcp-css/3.0.55/public/resource/mall/svg/ic/ic_arrow_right_s20_666.svg) no-repeat center/20px 20px}
+.apSwiper--news-list .swiper-slide.more .btn-morelist__text{display:block;margin-top:8px;text-align:center;font-size:13px;color:#000}
+.apSwiper--news-list .list_tem__link{color:#666}
+.apSwiper--news-list .tit{margin-bottom:10px;font-size:16px;font-weight:700;letter-spacing:-.08px;color:#000;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.apSwiper--news-list .desc{min-height:36px;max-height:36px;margin-bottom:8px;font-size:14px;letter-spacing:-.07px;color:#333;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;line-height:18px}
+.apSwiper--news-list .date{font-size:12px;letter-spacing:-.06px;color:#999}
+.store-desc{max-height:120px;font-size:15px;color:#333;letter-spacing:-.08px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:5;line-height:24px;overflow:hidden}
+.store-desc>a{display:block;color:inherit}
+.module-linkPopup{display:none;width:200px;padding:12px 0;border-radius:8px;background-color:#fff;box-shadow:0 3px 6px 0 rgba(0,0,0,.16)}
+.module-header__logo-link .module-linkPopup{position:absolute;top:40px;right:0;z-index:2}
+.module-linkPopup__item{height:48px}
+.module-linkPopup__item+.module-linkPopup__item{margin-top:4px}
+.module-linkPopup__item-btn{width:100%;height:100%;padding:0 20px;text-align:left;display:flex;justify-content:normal;align-items:center}
+.module-linkPopup__item-btn .linkThumb{position:relative;width:32px;height:32px;margin-right:12px;background-color:#ddd;border-radius:10px}
+.module-linkPopup__item-btn .linkText{font-size:16px;color:#333}
+.module-linkPopup__item--active .linkThumb::before{content:"";display:block;position:absolute;bottom:-3px;right:-3px;z-index:1;width:10px;height:10px;border:1px solid #fff;background-color:#ff5a5a;border-radius:5px}
+.module-linkPopup__item--active .linkText{font-weight:700;color:#000}
 .dimmed{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,.4);z-index:10}
 .basicDialog{position:fixed;top:0;bottom:0;left:0;right:0;background-color:#fff;z-index:10}
 @media (min-width:768px){
@@ -149,7 +242,7 @@ button[class]:disabled{cursor:default}
 }
 .dialogContent__titleBox{margin-top:8px}
 .dialogContent__titleBox--hasSpace{margin-top:48px}
-.dialogContent__itemBox>.basicDesc{margin-top:24px;font-size:14px;line-height:22px;color:#666}
+.dialogContent__itemBox>.basicDesc{margin-top:24px;font-size:14px;line-height:22px;color:#888}
 .dialogContent .primaryBox--hasSpace{margin-top:80px}
 @media (min-width:768px){
 .dialogContent .primaryBox--hasSpace{margin-top:32px}
