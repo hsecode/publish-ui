@@ -21,8 +21,9 @@ gulp.task('mall', function(){
       .pipe(sourcemaps.init())
       .pipe(sass({fiber:Fiber}).on('error', sass.logError))
       .pipe(autoprefixer({
-              cascade: false
-          }))
+          overrideBrowserslist: ['last 2 versions'],
+          cascade: false
+      }))
       .pipe(cleancss({format: "keep-breaks"}))
       .pipe(sourcemaps.write('./maps'))
       .pipe(gulp.dest("css"))
