@@ -1,5 +1,77 @@
 @use "../general/index" as *;
 
+.dimmed {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 50;
+}
+
+.dialog {
+    // dialog-wrap
+    &-wrap {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 50;
+    
+        // dialog-wrap--dimmed
+        &--dimmed {
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+    }
+
+    // dialog-container
+    &-container {
+        position: relative;
+        min-width: 280px;
+        max-width: 640px;
+        height: 100vh;
+        margin: 0 auto;
+        @include flex(flex, normal, normal);
+    }
+
+    // dialog-box
+    &-box {
+        width: 100%;
+    }
+
+    // dialog-heading
+    &-heading {
+        font-size: 16px;
+        font-weight: 700;
+        color: #000;
+        @include ellipsis;
+     // dialog-heading-box
+        &-box {
+            position: relative;
+            height: 56px;
+            padding: 0 15px;
+            border-bottom: 1px solid #f0f0f0;
+            background-color: #fff;
+            @include flex(flex, center, center);
+            .btn-close {
+                position: absolute;
+                top: 50%;
+                right: 15px;
+                margin-top: -16px;
+            }
+        }   
+    }
+
+    // dialog-contents
+    &-contents {
+        height: calc(100vh - 56px);
+    }
+    
+}
+
 .module- {
     // module-linkPopup
     &linkPopup {
@@ -69,16 +141,6 @@
             }
         }
     }
-}
-.dimmed {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: 10;
 }
 
 .basicDialog {

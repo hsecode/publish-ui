@@ -7,10 +7,15 @@
 .module- {
     &map {
         position: relative;
-        height: 140px;
-        border: 1px solid hsla(0, 0%, 80%, .5);
-        border-radius: 8px;
+        height: 100%;
         overflow: hidden;
+
+        // module-map--small
+        &--small {
+            height: 140px;
+            border: 1px solid hsla(0, 0%, 80%, .5);
+            border-radius: 8px;
+        }
 
         .o2o-contents & {
             margin-top: 20px;
@@ -20,7 +25,7 @@
             position: absolute;
             top: 8px;
             right: 8px;
-            z-index: 10;
+            z-index: 5;
         }
 
         // module-map__detail

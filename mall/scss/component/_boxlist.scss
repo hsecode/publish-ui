@@ -135,3 +135,12 @@
         }
     }
 }
+
+.share-select-list {
+    @include flex(flex, space-a);
+
+    // share-select-list__item
+    &__item {
+        text-align: center;
+    }
+}
