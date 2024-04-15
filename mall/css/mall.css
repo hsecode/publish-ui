@@ -94,9 +94,9 @@ button[class]:disabled{cursor:default}
 .swiper-banner-box{position:relative;padding:20px}
 .swiper-banner-box .swiper-banner{position:relative;border-radius:12px}
 .module-card{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:normal;-ms-flex-pack:normal;justify-content:normal;-webkit-box-align:normal;-ms-flex-align:normal;align-items:normal}
-.module-card .card-thumb{position:relative;width:100px;height:100px;margin-right:20px;border-radius:8px;overflow:hidden}
+.module-card .card-thumb{-ms-flex-negative:0;flex-shrink:0;position:relative;width:100px;height:100px;margin-right:20px;border-radius:8px;overflow:hidden}
 .module-card .card-thumb img{position:absolute;top:50%;left:50%;width:auto;height:100%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}
-.module-card .card-contents{-webkit-box-flex:1;-ms-flex:1;flex:1}
+.module-card .card-contents{-webkit-box-flex:1;-ms-flex:1;flex:1;min-width:0}
 .module-card .card-contents .tit{margin-bottom:4px;font-size:17px;letter-spacing:-.09px;font-weight:700;color:#000;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
 .module-card .card-contents .desc{min-height:40px;max-height:40px;font-size:14px;line-height:20px;letter-spacing:-.07px;color:#333;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-height:20px;overflow:hidden}
 .module-card .card-contents .time{margin-top:16px;font-size:14px;line-height:20px;color:#000;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:normal;-ms-flex-pack:normal;justify-content:normal;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
