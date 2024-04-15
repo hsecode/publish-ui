@@ -1,2 +1,270 @@
 @use "../general/index" as *;
 
+.module- {
+    // module-linkPopup
+    &linkPopup {
+        display: none;
+        width: 200px;
+        padding: 12px 0;
+        border-radius: 8px;
+        background-color: #fff;
+        box-shadow: 0 3px 6px 0 rgba(0,0,0,.16);
+
+        @at-root .module-header__logo-link .module-linkPopup {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            z-index: 2;
+        }
+
+        // module-linkPopup__item
+        &__item {
+            height: 48px;
+
+            + .module-linkPopup__item {
+                margin-top: 4px;
+            }
+
+            // module-linkPopup__item-btn
+            &-btn {
+                width: 100%;
+                height: 100%;
+                padding: 0 20px;
+                text-align: left;
+                @include flex(flex, normal, center);
+
+                .linkThumb {
+                    position: relative;
+                    width: 32px;
+                    height: 32px;
+                    margin-right: 12px;
+                    background-color: #ddd;
+                    border-radius: 10px;
+                }
+                .linkText {
+                    font-size: 16px;
+                    color: #333;
+                }
+            }
+
+            // module-linkPopup__item--active
+            &--active {
+                .linkThumb::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    bottom: -3px;
+                    right: -3px;
+                    z-index: 1;
+                    width: 10px;
+                    height: 10px;
+                    border: 1px solid #fff;
+                    background-color: #ff5a5a;
+                    border-radius: 5px;
+                }
+                .linkText {
+                    font-weight: 700;
+                    color: #000;
+                }
+            }
+        }
+    }
+}
+.dimmed {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+.basicDialog {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 10;
+
+    @include tablet {
+        top: 50%;
+        bottom: auto;
+        left: 50%;
+        right: auto;
+        width: 360px;
+        height: 576px;
+        border-radius: 8px;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+    }
+
+    // basicDialog--columnBox
+    &--columnBox {
+        .dialogContent--detail {
+            flex: 1;
+            width: 100%;
+            flex-direction: column;
+            @include flex(flex, space-b);
+        }
+        .apiArea {
+            flex: 1;
+            padding: 32px 16px 0;
+
+            // apiArea__content
+            &__content {
+                height: 100%;
+            }
+        }
+        @include tablet {
+            .dialogContent--detail {
+                padding: 32px 16px;
+            }
+            .apiArea {
+                padding: 0;
+            }
+        }
+    }
+}
+
+.dialogHeadingBox {
+    min-width: 0;
+}
+
+.dialogHeader {
+    flex-shrink: 0;
+    position: relative;
+    height: 52px;
+    padding: 0 45px;
+    border-bottom: 1px solid #eee;
+    @include flex(flex, center, center);
+
+    // dialogHeader__heading
+    &__heading {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 28px;
+        color: $black;
+        @include ellipsis;
+    }
+
+    @include tablet {
+        height: 62px;
+        padding-top: 10px;
+    }
+
+    .btnHeader {
+        @include tablet {
+            .icon--close {
+                transform: translate(-50%, calc(-50% + 5px));
+            }
+        }
+    }
+}
+
+.dialogContent {
+    position: relative;
+    margin: 0 auto;
+    padding: 32px 16px 30px;
+    @include tablet {
+        min-height: calc(100% - 62px);
+        max-height: calc(100% - 62px);
+        overflow-y: auto;
+    }
+
+    // dialogContent__titleBox
+    &__titleBox {
+        margin-top: 8px;
+
+        // dialogContent__titleBox--hasSpace
+        &--hasSpace {
+            margin-top: 48px;
+        }
+    }
+
+    // dialogContent__itemBox
+    &__itemBox {
+        > .basicDesc {
+            margin-top: 24px;
+            font-size: 14px;
+            line-height: 22px;
+            color: $gray;
+        }
+    }
+
+    .primaryBox {
+        // primaryBox--hasSpace
+        &--hasSpace {
+            margin-top: 80px;
+            @include tablet {
+                margin-top: 32px;
+            }
+        }
+    }
+
+    // dialogContent--detail
+    &--detail {
+        padding: 0;
+        min-height: 0;
+    }
+
+    .apiArea {
+        overflow: hidden;
+
+        // apiArea__content
+        &__content {
+            overflow-y: auto;
+        }
+    }
+}
+
+.alertBox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 92%;
+    max-width: 328px;
+    background: #fff;
+    border-radius: 8px;
+    transform: translate(-50%, -50%);
+
+    // alertBox__desc
+    &__desc {
+        padding: 32px 16px 31px;
+        text-align: center;
+        font-size: 16px;
+        line-height: 24px;
+        color: $black;
+    }
+
+    // alertBox__btnBox
+    &__btnBox {
+        border-top: 1px solid #eee;
+        @include flex(flex, normal, center);
+    }
+
+    // alertBox__btn
+    &__btn {
+        flex: 1;
+        position: relative;
+        height: 56px;
+        font-size: 16px;
+        color: $black;
+
+        + .alertBox__btn {
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 1px;
+                height: 16px;
+                background: #eee;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}

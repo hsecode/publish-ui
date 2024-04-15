@@ -10,6 +10,71 @@
     }
 }
 
+.module- {
+    // module-card
+    &card {
+        @include flex(flex, normal, normal);
+
+        .card {
+            // card-thumb
+            &-thumb {
+                position: relative;
+                width: 100px;
+                height: 100px;
+                margin-right: 20px;
+                border-radius: 8px;
+                overflow: hidden;
+    
+                img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: auto;
+                    height: 100%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+            // card-centents
+            &-contents {
+                flex: 1;
+                .tit {
+                    margin-bottom: 4px;
+                    font-size: 17px;
+                    letter-spacing: -.09px;
+                    font-weight: 700;
+                    color: #000;
+                    @include ellipsis;
+                }
+                .desc {
+                    min-height: 40px;
+                    max-height: 40px;
+                    font-size: 14px;
+                    line-height: 20px;
+                    letter-spacing: -.07px;
+                    color: #333;
+                    @include ellipsis-multi(2, 20px);
+                }
+                .time {
+                    margin-top: 16px;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #000;
+                    @include flex(flex, normal, center);
+
+                    .ic_time_20 {
+                        margin-right: 4px;
+                    }
+
+                    .emp {
+                        margin-right: 2px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .category-btn {
 
     // category-btn-box
@@ -22,6 +87,49 @@
     &-item {
         + .category-btn-item {
             margin-left: 20px;
+        }
+    }
+}
+
+.store-info-list {
+    // store-info-list__item
+    &__item {
+        + .store-info-list__item {
+            margin-top: 16px;
+        }
+
+        .item {
+            // item-thumb
+            &-thumb {
+                width: 20px;
+                height: 20px;
+                margin-right: 16px;
+            }
+
+            // item-contents
+            &-contents {
+                display: flex;
+                flex-wrap: wrap;
+                
+                .txt {
+                    width: 100%;
+                    font-size: 15px;
+                    line-height: 21px;
+
+                    + .txt {
+                        margin-top: 2px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.service-info-list {
+    // service-info-list__item
+    &__item {
+        + .service-info-list__item {
+            margin-top: 40px;
         }
     }
 }

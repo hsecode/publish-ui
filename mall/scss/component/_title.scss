@@ -1,1 +1,20 @@
 @use "../general/index" as *;
+
+.heading-box {
+    display: block;
+
+    .o2o-contents & {
+        margin-bottom: 20px;
+    }
+
+    .heading {
+        font-size: 18px;
+        font-weight: 700;
+        color: #000;
+        
+        // heading--h4
+        &--h4 {
+            font-size: 22px;
+        }
+    }
+}

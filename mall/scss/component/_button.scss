@@ -27,3 +27,42 @@
         background: url(https://apm-web.amoremall.com/public/resource/mall/svg/ic/ic_share_s51_3a416f.svg) no-repeat;
     }
 }
+
+
+.btn {
+    // btn-expand
+    &-expand {
+        padding: 8px;
+        border: 1px solid #e2e2e2;
+        background-color: #fff;
+        border-radius: 6px;
+    }
+
+    // btn-round
+    &-round {
+        min-width: 50px;
+        height: 46px;
+        padding: 0 20px;
+        border: 1px solid #e2e2e2;
+        border-radius: 23px;
+        font-size: 14px;
+        color: #000;
+        @include flex(flex, center, center);
+
+        .text {
+            overflow: hidden;
+            white-space: nowrap;
+            @include flex(flex, normal);
+            em {
+                margin-right: 4px;
+                font-weight: 700;
+                font-style: normal;
+                @include ellipsis;
+            }
+        }
+        .ic_more_8x20 {
+            flex-shrink: 0;
+            margin-left: 6px;
+        }
+    }
+}

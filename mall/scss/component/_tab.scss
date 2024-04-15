@@ -1,0 +1,46 @@
+@use "../general/index" as *;
+
+.tabs {
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid #f0f0f0;
+    background-color: #fff;
+    z-index: 2;
+
+    @at-root .o2o-wrap {
+        .tabs {
+            position: sticky;
+            top: 56px;
+            height: 50px;
+            padding: 0 20px;
+
+            // tabs__item
+            &__item {
+                position: relative;
+                min-width: 51px;
+                height: 50px;
+                font-size: 18px;
+                color: #333;
+
+                // tabs__item--active
+                &--active {
+                    font-weight: 700;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        height: 2px;
+                        background-color: #333545;
+                    }
+                }
+
+                + .tabs__item {
+                    margin-left:20px
+                }
+            }
+        }
+    }
+}

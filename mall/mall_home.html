@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover, shrink-to-fit=no,target-densitydpi=medium-dpi">
+    <link rel="stylesheet" type="text/css" href="css/mall.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="https://images-kr.amoremall.com/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="https://images-kr.amoremall.com/favicon/favicon_57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://images-kr.amoremall.com/favicon/favicon_60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://images-kr.amoremall.com/favicon/favicon_72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://images-kr.amoremall.com/favicon/favicon_76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://images-kr.amoremall.com/favicon/favicon_114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://images-kr.amoremall.com/favicon/favicon_120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://images-kr.amoremall.com/favicon/favicon_144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://images-kr.amoremall.com/favicon/favicon_152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://images-kr.amoremall.com/favicon/favicon_180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://images-kr.amoremall.com/favicon/favicon_192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://images-kr.amoremall.com/favicon/favicon_32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://images-kr.amoremall.com/favicon/favicon_96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://images-kr.amoremall.com/favicon/favicon_16.png">
+    <link rel="apple-touch-icon-precomposed" sizes="192x192"
+        href="https://images-kr.amoremall.com/favicon/favicon_192.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180"
+        href="https://images-kr.amoremall.com/favicon/favicon_180.png">
+    <!-- // favicon -->
+    <!-- meta -->
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <meta name="theme-color" content="#333545">
+    <meta name="title" content="AMORESTORE | 아모레성수">
+    <meta name="description" content="내 안의 아름다움을 마주하는 공간, 아모레성수에서 만나요!">
+    <meta name="writer" content="아모레퍼시픽">
+    <meta name="keywords">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.amoremall.com/kr/ko/store/display?storeCode=001">
+    <meta property="og:title" content="AMORESTORE | 아모레성수">
+    <meta property="og:description" content="내 안의 아름다움을 마주하는 공간, 아모레성수에서 만나요!">
+    <meta property="og:image" content="https://images-kr.amoremall.com/o2o/AS0000000163">
+    <meta property="og:site_name" content="아모레퍼시픽">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="twitter:title" content="AMORESTORE | 아모레성수">
+    <meta property="twitter:description" content="내 안의 아름다움을 마주하는 공간, 아모레성수에서 만나요!">
+    <meta property="twitter:url" content="https://www.amoremall.com/kr/ko/store/display?storeCode=001">
+    <meta property="twitter:image" content="https://images-kr.amoremall.com/o2o/AS0000000163">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta name="next-head-count" content="21">
+    <!-- //meta -->
+    <title>AMORESTORE | 아모레성수</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- [D] 스코핑을 위한 접두사 o2o 사용/ 커스텀이 필요할 경우 modifier 활용 -->
+        <!-- [D] 공통 모듈/컴포넌트의 경우 접두사 module- 사용 -->
+        <!-- [D] 클래스네이밍은 Kebab-case와 BEM을 사용 -->
+        <!-- [D] 시맨틱태그 사용 -->
+        <section class="o2o-wrap o2o-wrap--flex-layout">
+            <!-- header -->
+            <!-- [D] 브라우저 스크롤 높이 위치 값이 56px(module-header__top) 이상이 되면 클래스 module-header--scroll 추가 / 56px 미만이면 제거 -->
+            <header class="module-header">
+                <div class="module-header__top">
+                    <h1 class="module-header__logo">
+                        <a href="#" title="">
+                            <span class="module-header__logo-img">
+                                <i class="atom-icon logo_amoreStore_s165x28_fff">채널</i>
+                            </span>
+                            <!-- [D] module-header__logo-img black case -->
+                            <!--
+                            <span class="module-header__logo-img module-header__logo-img--black">
+                                <img src="https://images-kr.amoremall.com/logo/ic_logo_amoreMall_s158x28_000.svg" alt="AMORE MALL">
+                            </span>
+                            -->
+                        </a>
+                    </h1>
+                    <!-- [D] module-header__logo-btn 클릭 시 클래스 module-header__logo-link--active 추가 -->
+                    <div class="module-header__logo-link">
+                        <button type="button" class="module-header__logo-btn">
+                            <i class="atom-icon ic_angle_down_circle_fill_s24">몰 이동 열기/닫기</i>
+                        </button>
+                        <ul class="module-linkPopup">
+                            <li class="module-linkPopup__item">
+                                <button type="button" class="module-linkPopup__item-btn">
+                                    <div class="linkThumb">
+                                        <i class="icon ic_gnb_logo_amore_96"></i>
+                                    </div>
+                                    <p class="linkText">아모레 몰</p>
+                                </button>
+                            </li>
+                            <!-- [D] 활성화 시 클래스 module-linkPopup__item--active 추가 -->
+                            <li class="module-linkPopup__item module-linkPopup__item--active">
+                                <button type="button" class="module-linkPopup__item-btn">
+                                    <div class="linkThumb">
+                                        <i class="icon ic_gnb_logo_amore_store_64"></i>
+                                    </div>
+                                    <p class="linkText">아모레 스토어</p>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="module-header__util">
+                        <a href="#" class="module-header__btn"><span class="icon icon--user">마이</span></a>
+                    </div>
+                </div>
+
+                <div class="module-header__under">
+                    <h2 class="module-header__heading">
+                        <a href="#" class="txt--white">아모레성수</a>
+                    </h2>
+                    <p class="module-header__desc module-header__desc--default">내 안의 아름다움을 마주하는 공간, 아모레성수에서 만나요!</p>
+                    <div class="module-header__util">
+                        <a href="#" class="module-header__btn"><span class="icon icon--user">마이</span></a>
+                    </div>
+                </div>
+            </header>
+            <!-- // header -->
+
+            <!-- contents -->
+            <section class="container">
+                <div class="contents">
+                    <div class="contents-top">
+                        <div class="swiper-banner-box">
+                            <div class="swiper-container apSwiper--bannerDiscountSwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="imgBox">
+                                            <img src="https://images-kr.amoremall.com/o2o/AS0000000163?resize=670:670" class="swiper-lazy swiper-lazy-loaded" alt>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="imgBox">
+                                            <img src="https://images-kr.amoremall.com/o2o/AS0000000164?resize=670:670" class="swiper-lazy swiper-lazy-loaded" alt>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="imgBox">
+                                            <img src="https://images-kr.amoremall.com/o2o/AS0000000165?resize=670:670" class="swiper-lazy swiper-lazy-loaded" alt>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="imgBox">
+                                            <img src="https://images-kr.amoremall.com/o2o/AS0000000166?resize=670:670" class="swiper-lazy swiper-lazy-loaded" alt>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="imgBox">
+                                            <img src="https://images-kr.amoremall.com/o2o/AS0000000167?resize=670:670" class="swiper-lazy swiper-lazy-loaded" alt>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="imgBox">
+                                            <img src="https://images-kr.amoremall.com/o2o/AS0000000168?resize=670:670" class="swiper-lazy swiper-lazy-loaded" alt>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="imgBox">
+                                            <img src="https://images-kr.amoremall.com/o2o/AS0000000323?resize=670:670" class="swiper-lazy swiper-lazy-loaded" alt>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="colorSecondary swiper-pagination"></div>
+                                <button class="swiper-button-prev"><i class="atom-icon ic_angle_flicking_left_s35">이전</i></button>
+                                <button class="swiper-button-next"><i class="atom-icon ic_angle_flicking_right_s35">다음</i></button>
+                            </div>
+                        </div>
+                        <div class="category-btn-box">
+                            <div class="category-btn-item">
+                                <button type="button" class="category-btn category-btn--call">
+                                    <span class="category-btn__text">전화</span>
+                                </button>
+                            </div>
+                            <div class="category-btn-item">
+                                <button type="button" class="category-btn category-btn--reserve">
+                                    <span class="category-btn__text">예약</span>
+                                </button>
+                            </div>
+                            <div class="category-btn-item">
+                                <button type="button" class="category-btn category-btn--share">
+                                    <span class="category-btn__text">공유</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contents-tab">
+                        <div class="tabs" role="tablist" aria-label="콘텐츠 전환 탭">
+                            <!-- [D] 활성화 시 클래스 tabs__item--active 추가 -->
+                            <button class="tabs__item tabs__item--active" role="tab" aria-selected="true"><span
+                                    class="inner">홈</span></button>
+                            <button class="tabs__item" role="tab" aria-selected="false"><span
+                                    class="inner">소개</span></button>
+                            <button class="tabs__item" role="tab" aria-selected="false"><span
+                                    class="inner">예약</span></button>
+                            <button class="tabs__item" role="tab" aria-selected="false"><span
+                                    class="inner">소식</span></button>
+                        </div>
+                        <div class="tab-pannel" role="tabpanel">
+                            <h3 class="blind">홈</h3>
+                            <div class="product-detail">
+                                <!-- 매장 소식 -->
+                                <div class="article article__news">
+                                    <div class="contents-wrap">
+                                        <h4 class="blind">매장 소식</h4>
+                                        <div class="swiper-container apSwiper--news-list" style="overflow-x: auto;">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="list-item">
+                                                        <a href="#" class="list-item__link">
+                                                            <p class="tit">커스텀미 맞춤 스킨케어 서비스 오픈 및 이벤트 안내</p>
+                                                            <p class="desc"></p>
+                                                            <span class="date">2024.03.25</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="list-item">
+                                                        <a href="#" class="list-item__link">
+                                                            <p class="tit">[종료] 3월 팝업안내 : UNDEFINED</p>
+                                                            <p class="desc"></p>
+                                                            <span class="date">2024.03.11</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="list-item">
+                                                        <a href="#" class="list-item__link">
+                                                            <p class="tit">[종료] 2월 팝업안내 : Cupid's Lab</p>
+                                                            <p class="desc"></p>
+                                                            <span class="date">2024.02.12</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide more">
+                                                    <a href="#" class="btn-morelist">
+                                                        <i class="btn-morelist__icon"></i>
+                                                        <span class="btn-morelist__text">더 보기</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- // 매장 소식 -->
+
+                                <!-- 매장 정보 -->
+                                <div class="article article__store-info o2o-contents">
+                                    <div class="heading-box">
+                                        <h4 class="heading heading--h4">매장 정보</h4>
+                                    </div>
+                                    <div class="article__contents">
+                                        <ul class="store-info-list">
+                                            <li class="store-info-list__item">
+                                                <div class="bundle bundle--flex">
+                                                    <div class="item-thumb">
+                                                        <i class="icon ic_store_20"></i>
+                                                    </div>
+                                                    <div class="item-contents">
+                                                        <p class="txt">서울 성동구 아차산로11길 7</p>
+                                                        <p class="txt txt--gray">서울 성동구 성수동2가 277-52</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="store-info-list__item">
+                                                <div class="bundle bundle--flex">
+                                                    <div class="item-thumb">
+                                                        <i class="icon icon_mobile_20"></i>
+                                                    </div>
+                                                    <div class="item-contents">
+                                                        <a href="#" class="txt txt--blue numNormal">02-469-8600</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="store-info-list__item">
+                                                <div class="bundle bundle--flex">
+                                                    <div class="item-thumb">
+                                                        <i class="icon ic_time_20"></i>
+                                                    </div>
+                                                    <div class="item-contents">
+                                                        <p class="txt is-ellipsis">10:30 ~ 20:30</p>
+                                                        <p class="txt is-ellipsis txt--gray">매주 월요일 휴무, 명절 당일 휴무</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="store-info-list__item">
+                                                <div class="bundle bundle--flex">
+                                                    <div class="item-thumb">
+                                                        <i class="icon ic_sns_20"></i>
+                                                    </div>
+                                                    <div class="item-contents">
+                                                        <a href="#" class="txt txt--blue" target="_blank"
+                                                            rel="noreferrer">인스타그램</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="module-map">
+                                            <button class="btn-expand"><i class="icon ic_scale_20">지도 확대</i></button>
+                                            <div class="module-map__detail"
+                                                style="background: url(https://t1.daumcdn.net/mapjsapi/images/2x/bg_tile.png);">
+                                                kakao map area
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- // 매장 정보 -->
+
+                                <!-- 매장 소개 -->
+                                <div class="article article__store-detail o2o-contents">
+                                    <div class="heading-box">
+                                        <h4 class="heading heading--h4">매장 소개</h4>
+                                    </div>
+                                    <div class="article__contents">
+                                        <p class="store-desc">
+                                            <a href="#">내 안의 아름다움을 알아가는 곳, 아모레성수새롭고 빛나는 것은 젊고 아름답습니다.그러나 오랜 시간을 견디며 포개어진
+                                                시간 속에 피어나는 본연의 미는 그 자체로 대체할 수 없는 깊이와 새것이 줄 수 없는 귀함이 있습니다.콘크리트로 투박하게 마감된
+                                                벽, 정비를 위해 곳곳에 설치된 여러가지 장치들, 고르지 못한 높낮이의 바닥과 계단, 불쑥 나타나는 낮은 천장과 언제 그랬냐는 듯
+                                                다시 나타나는 높고 뾰족한 천장들.공장 지대였던 성수동의 로컬 분위기를 고스란히 담고 있는 이곳은, 오랜 시간 동안 고장 난
+                                                자동차가 제대로 작동하도록 보살피고 손질하는 공간 이었습니다. 우리는 거칠지만 세월을 견디며 고유의 멋으로 충만한 이곳에서, 모든
+                                                분들께 전해드리고 싶은 ‘본연의 아름다움’에 대한 이야기를 정성스럽게 준비했습니다. 이 계절 내 피부가 가장 좋아하는 감촉의
+                                                크림을 느껴보세요. 나에게 가장 잘 어울리는 립 컬러를 발견해보는 즐거움과 큰 창을 통해 깊이 들어오는 햇빛과 정원의 초록을 눈에
+                                                담으며 나에게 진정한 휴식을 선물해보세요.다채롭고 진솔한 경험을 통해 나 자신을 마주하는 곳, 우리 본연의 아름다움을 탐험하고
+                                                발견하며 자신의 ‘미’를 알아가는 공간, 아모레성수 입니다.</a>
+                                        </p>
+                                        <div class="article-btn-box">
+                                            <button class="btn-round">
+                                                <span class="text"><em>아모레성수</em>자세히 보기</span>
+                                                <span class="icon ic_more_8x20"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- // 매장 소개 -->
+
+                                <!-- 서비스 예약 -->
+                                <div class="article article__reserve o2o-contents">
+                                    <div class="heading-box">
+                                        <h4 class="heading heading--h4">서비스 예약</h4>
+                                    </div>
+                                    <div class="article__contents">
+                                        <ul class="service-info-list">
+                                            <li class="service-info-list__item">
+                                                <a href="#">
+                                                    <div class="module-card">
+                                                        <div class="card-thumb">
+                                                            <picture>
+                                                                <source srcset="https://images-kr.amoremall.com/o2o/SS0000000369?format=webp&amp;resize=*:200&amp;crop=200:200;*,*, https://images-kr.amoremall.com/o2o/SS0000000369?format=webp&amp;resize=*:200&amp;crop=200:200;*,* 2x" type="image/webp">
+                                                                <source srcset="https://images-kr.amoremall.com/o2o/SS0000000369?resize=*:200&amp;crop=200:200;*,*, https://images-kr.amoremall.com/o2o/SS0000000369?resize=*:200&amp;crop=200:200;*,* 2x">
+                                                                <img src="https://images-kr.amoremall.com/o2o/SS0000000369?resize=*:200&amp;crop=200:200;*,*" data-src="https://images-kr.amoremall.com/o2o/SS0000000369" class="loaded">
+                                                            </picture>
+                                                        </div>
+                                                        <div class="card-contents">
+                                                            <p class="tit">원포인트 티칭 메이크업 서비스</p>
+                                                            <p class="desc">1:1 맞춤 메이크업 서비스를 받아보세요</p>
+                                                            <div class="time">
+                                                                <i class="icon ic_time_20"></i>
+                                                                <p><span class="emp">45</span>분</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="service-info-list__item">
+                                                <a href="#">
+                                                    <div class="module-card">
+                                                        <div class="card-thumb">
+                                                            <picture>
+                                                                <source srcset="https://images-kr.amoremall.com/o2o/SS0000000367?format=webp&amp;resize=*:200&amp;crop=200:200;*,*, https://images-kr.amoremall.com/o2o/SS0000000367?format=webp&amp;resize=*:200&amp;crop=200:200;*,* 2x" type="image/webp">
+                                                                <source srcset="https://images-kr.amoremall.com/o2o/SS0000000367?resize=*:200&amp;crop=200:200;*,*, https://images-kr.amoremall.com/o2o/SS0000000367?resize=*:200&amp;crop=200:200;*,* 2x">
+                                                                <img src="https://images-kr.amoremall.com/o2o/SS0000000367?resize=*:200&amp;crop=200:200;*,*" data-src="https://images-kr.amoremall.com/o2o/SS0000000367" class="loaded">
+                                                            </picture>
+                                                        </div>
+                                                        <div class="card-contents">
+                                                            <p class="tit">TONEWORK VEGAN 365+ LIQUID LIP</p>
+                                                            <p class="desc">Discover your perfect lip color to make you shine as you are</p>
+                                                            <div class="time">
+                                                                <i class="icon ic_time_20"></i>
+                                                                <p><span class="emp">60</span>분</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="service-info-list__item">
+                                                <a href="#">
+                                                    <div class="module-card">
+                                                        <div class="card-thumb">
+                                                            <picture>
+                                                                <source srcset="https://images-kr.amoremall.com/o2o/SS0000000368?format=webp&amp;resize=*:200&amp;crop=200:200;*,*, https://images-kr.amoremall.com/o2o/SS0000000368?format=webp&amp;resize=*:200&amp;crop=200:200;*,* 2x" type="image/webp">
+                                                                <source srcset="https://images-kr.amoremall.com/o2o/SS0000000368?resize=*:200&amp;crop=200:200;*,*, https://images-kr.amoremall.com/o2o/SS0000000368?resize=*:200&amp;crop=200:200;*,* 2x">
+                                                                <img src="https://images-kr.amoremall.com/o2o/SS0000000368?resize=*:200&amp;crop=200:200;*,*" data-src="https://images-kr.amoremall.com/o2o/SS0000000368" class="loaded">
+                                                            </picture>
+                                                        </div>
+                                                        <div class="card-contents">
+                                                            <p class="tit">HERA SILKY STAY CUSTOM MATCH 맞춤파운데이션 서비스</p>
+                                                            <p class="desc">내 피부톤에 꼭 맞는 쉐이드, 헤라 실키 스테이 커스텀 매치</p>
+                                                            <div class="time">
+                                                                <i class="icon ic_time_20"></i>
+                                                                <p><span class="emp">60</span>분</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="article-btn-box">
+                                            <button class="btn-round">
+                                                <span class="text"><em>서비스 예약</em>자세히 보기</span>
+                                                <span class="icon ic_more_8x20"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- // 서비스 예약 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- // contents -->
+
+            <!-- footer -->
+            <footer class="module-footer">
+                <section class="module-footer__inner">
+                    <ul class="module-footer__links">
+                        <li>
+                            <a href="#" title="페이지 이동">로그인</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" title="새창열림">이용약관</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" title="새창열림">개인정보처리방침</a>
+                        </li>
+                    </ul>
+                    <div class="module-footer__copyright">
+                        <div class="module-footer__copyright-txt">© AMOREPACIFIC CORPORATION. ALL RIGHTS RESERVED</div>
+                    </div>
+                </section>
+            </footer>
+            <!-- // footer -->
+        </section>
+    </div>
+
+    <!-- Swiper's JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- [D] 디자인 확인 목적으로 생성한 js입니다. 개발시 삭제 부탁드립니다 -->
+    <script>
+        const btnLogo = document.querySelector('.module-header__logo-btn');
+
+        btnLogo.addEventListener('click', function () {
+            const logoLink = document.querySelector('.module-header__logo-link');
+            logoLink.classList.toggle('module-header__logo-link--active');
+        });
+
+
+        window.onload = function() {
+            const swiper = new Swiper('.apSwiper--bannerDiscountSwiper', {
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    type: "progressbar",
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                on: {
+                    init: function() {
+                        this.pagination.$el.find('.swiper-pagination-progressbar-fill').css('transform', 'scaleX(0.142857)');
+                        // 프로그레스바 불러왔을 때, 스와이퍼 오류인지 scaleX(0.25)로 설정하여, 강제로 초기값을 입력하였습니다.
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
