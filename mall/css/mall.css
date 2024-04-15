@@ -110,7 +110,9 @@ button[class]:disabled{cursor:default}
 .store-info-list__item .item-contents .txt{width:100%;font-size:15px;line-height:21px}
 .store-info-list__item .item-contents .txt+.txt{margin-top:2px}
 .service-info-list__item+.service-info-list__item{margin-top:40px}
-.tabs{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;border-bottom:1px solid #f0f0f0;background-color:#fff;z-index:2}
+.share-select-list{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-pack:distribute;justify-content:space-around}
+.share-select-list__item{text-align:center}
+.tabs{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;border-bottom:1px solid #f0f0f0;background-color:#fff;z-index:10}
 .o2o-wrap .tabs{position:sticky;top:56px;height:50px;padding:0 20px}
 .o2o-wrap .tabs__item{position:relative;min-width:51px;height:50px;font-size:18px;color:#333}
 .o2o-wrap .tabs__item--active{font-weight:700}
@@ -126,14 +128,19 @@ button[class]:disabled{cursor:default}
 .btn-round .text{overflow:hidden;white-space:nowrap;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:normal;-ms-flex-pack:normal;justify-content:normal}
 .btn-round .text em{margin-right:4px;font-weight:700;font-style:normal;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
 .btn-round .ic_more_8x20{-ms-flex-negative:0;flex-shrink:0;margin-left:6px}
+.btn-share{position:relative;width:60px;padding-top:70px;font-size:14px;line-height:21px;color:#888}
+.btn-share--facebook{background-size:60px 60px;background-image:url(//apm-web.amoremall.com/public/apcp-css/3.0.55/public/resource/mall/svg/logo/logo_facebook_s60.svg);background-repeat:no-repeat}
+.btn-share--url{background-size:60px 60px;background-image:url(//apm-web.amoremall.com/public/apcp-css/3.0.55/public/resource/mall/svg/ic/ic_link_circle_fill_s60.svg);background-repeat:no-repeat}
+.btn-close{position:relative;width:32px;height:32px;background-size:32px;background-image:url(//apm-web.amoremall.com/public/apcp-css/3.0.55/public/resource/core/svg/ic/ic_close_s32_040405.svg);background-repeat:no-repeat}
 .heading-box{display:block}
 .o2o-contents .heading-box{margin-bottom:20px}
 .heading-box .heading{font-size:18px;font-weight:700;color:#000}
 .heading-box .heading--h4{font-size:22px}
 .blind{position:absolute!important;z-index:-1;width:1px!important;height:1px!important;border:0;clip:rect(1px 1px 1px 1px)!important;-webkit-clip-path:inset(50%);clip-path:inset(50%);overflow:hidden!important}
-.module-map{position:relative;height:140px;border:1px solid hsla(0,0%,80%,.5);border-radius:8px;overflow:hidden}
+.module-map{position:relative;height:100%;overflow:hidden}
+.module-map--small{height:140px;border:1px solid hsla(0,0%,80%,.5);border-radius:8px}
 .o2o-contents .module-map{margin-top:20px}
-.module-map .btn-expand{position:absolute;top:8px;right:8px;z-index:10}
+.module-map .btn-expand{position:absolute;top:8px;right:8px;z-index:5}
 .module-map__detail{width:100%;height:100%;overflow:hidden}
 .atom-icon{display:inline-block;vertical-align:top;font-size:1px;white-space:nowrap;color:transparent;overflow:hidden}
 .atom-icon.logo_amoreStore_s165x28_fff{width:165px;height:28px;background:url(//apm-web.amoremall.com/public/apcp-css/3.0.55/public/resource/mall/svg/logo/logo_amoreStore_s165x28_fff.svg) no-repeat 50%;background-size:contain}
@@ -218,6 +225,15 @@ button[class]:disabled{cursor:default}
 .apSwiper--news-list .date{font-size:12px;letter-spacing:-.06px;color:#999}
 .store-desc{max-height:120px;font-size:15px;color:#333;letter-spacing:-.08px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:5;line-height:24px;overflow:hidden}
 .store-desc>a{display:block;color:inherit}
+.dimmed{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,.4);z-index:50}
+.dialog-wrap{position:fixed;top:0;left:0;right:0;bottom:0;z-index:50}
+.dialog-wrap--dimmed{background-color:rgba(0,0,0,.4)}
+.dialog-container{position:relative;min-width:280px;max-width:640px;height:100vh;margin:0 auto;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:normal;-ms-flex-pack:normal;justify-content:normal;-webkit-box-align:normal;-ms-flex-align:normal;align-items:normal}
+.dialog-box{width:100%}
+.dialog-heading{font-size:16px;font-weight:700;color:#000;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.dialog-heading-box{position:relative;height:56px;padding:0 15px;border-bottom:1px solid #f0f0f0;background-color:#fff;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.dialog-heading-box .btn-close{position:absolute;top:50%;right:15px;margin-top:-16px}
+.dialog-contents{height:calc(100vh - 56px)}
 .module-linkPopup{display:none;width:200px;padding:12px 0;border-radius:8px;background-color:#fff;-webkit-box-shadow:0 3px 6px 0 rgba(0,0,0,.16);box-shadow:0 3px 6px 0 rgba(0,0,0,.16)}
 .module-header__logo-link .module-linkPopup{position:absolute;top:40px;right:0;z-index:2}
 .module-linkPopup__item{height:48px}
@@ -227,7 +243,6 @@ button[class]:disabled{cursor:default}
 .module-linkPopup__item-btn .linkText{font-size:16px;color:#333}
 .module-linkPopup__item--active .linkThumb::before{content:"";display:block;position:absolute;bottom:-3px;right:-3px;z-index:1;width:10px;height:10px;border:1px solid #fff;background-color:#ff5a5a;border-radius:5px}
 .module-linkPopup__item--active .linkText{font-weight:700;color:#000}
-.dimmed{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,.4);z-index:10}
 .basicDialog{position:fixed;top:0;bottom:0;left:0;right:0;background-color:#fff;z-index:10}
 @media (min-width:768px){
 .basicDialog{top:50%;bottom:auto;left:50%;right:auto;width:360px;height:576px;border-radius:8px;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);overflow:hidden}
@@ -267,4 +282,12 @@ button[class]:disabled{cursor:default}
 .alertBox__btnBox{border-top:1px solid #eee;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:normal;-ms-flex-pack:normal;justify-content:normal;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .alertBox__btn{-webkit-box-flex:1;-ms-flex:1;flex:1;position:relative;height:56px;font-size:16px;color:#000}
 .alertBox__btn+.alertBox__btn::before{content:"";position:absolute;top:50%;left:0;width:1px;height:16px;background:#eee;-webkit-transform:translateY(-50%);transform:translateY(-50%)}
+.bottom-sheet{position:fixed;bottom:0;width:100%;max-width:640px;max-height:calc(100% - 115px);background:#fff;border-radius:8px 8px 0 0}
+.bottom-sheet .btn-sheet-handle{position:absolute;top:0;left:0;width:100%;height:25px}
+.bottom-sheet .btn-sheet-handle::before{content:"";position:absolute;left:50%;top:10px;width:61px;height:5px;background-color:#efefef;border-radius:3px;-webkit-transform:translateX(-50%);transform:translateX(-50%)}
+.bottom-sheet__heading{text-align:center;font-size:20px;line-height:24px;color:#000}
+.bottom-sheet__heading-box{padding:35px 20px 30px}
+.bottom-sheet__contents{padding:0 20px;overflow-y:auto}
+.bottom-sheet .share-select-list{padding:10px 20px 28px}
+.bottom-sheet .btn-close{position:absolute;right:12px;top:32px}
 /*# sourceMappingURL=maps/mall.css.map */
